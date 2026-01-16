@@ -1,0 +1,25 @@
+{
+  "name": "json-render-py",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "generate-prompt": "./dist/generate-prompt.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "generate-prompt": "pnpm run build && node dist/generate-prompt.js"
+  },
+  "dependencies": {
+    "@json-render/core": "workspace:*",
+    "commander": "^14.0.2"
+  },
+  "devDependencies": {
+    "@repo/typescript-config": "workspace:*",
+    "@types/node": "^22.0.0",
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5",
+    "zod": "^4.0.0"
+  }
+}
